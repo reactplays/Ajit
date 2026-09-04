@@ -10,7 +10,7 @@ from telegram.ext import (
 # ─── CONFIG ───────────────────────────────────────────────
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
-    raise RuntimeError("BOT_TOKEN env var not set")
+    raise RuntimeError("8814260946:AAFCBD4RRciHpGXAJMUrYVFgiZZHGHV1Dc8")
 
 ADMIN_ID = 8387890264
 CHANNEL_IDS = [-1001544229917, -1001209826602]
