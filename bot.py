@@ -10,7 +10,7 @@ from telegram.ext import (
 # ─── CONFIG ───────────────────────────────────────────────
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
-    raise RuntimeError("8814260946:AAFCBD4RRciHpGXAJMUrYVFgiZZHGHV1Dc8")
+    raise RuntimeError("BOT_TOKEN env var not set")
 
 ADMIN_ID = 8387890264
 CHANNEL_IDS = [-1001544229917, -1001209826602]
@@ -18,7 +18,7 @@ DB_PATH = "users.db"
 
 WHATSAPP_LINK = "https://wa.me/919596493523"
 BACKUP_CHANNEL = "https://t.me/+JvigXCD_ts9hNjhl"
-OWNER_USERNAME = "https://telegram.me/+919596493523"
+OWNER_USERNAME = "https://t.me/DevilAjitMods"
 IOS_POST = "https://t.me/iOSZERO_WINiOS/5781"
 ANDROID_POST = "https://t.me/BGMILOADER_TG/7657"
 
@@ -103,7 +103,7 @@ async def handle_join_request(update: Update, context: ContextTypes.DEFAULT_TYPE
     try:
         keyboard = [
             [
-                InlineKeyboardButton("💬 Contact Owner", url=OWNER_USERNAME),
+                InlineKeyboardButton("💬 Paid Hack Free", url=OWNER_USERNAME),
                 InlineKeyboardButton("📢 Backup Channel", url=BACKUP_CHANNEL)
             ]
         ]
@@ -153,7 +153,7 @@ async def ios_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     keyboard = [
         [InlineKeyboardButton("📲 View Post", url=IOS_POST)],
-        [InlineKeyboardButton("💬 Contact Owner", url=OWNER_USERNAME)]
+        [InlineKeyboardButton("💬 Paid Hack Free", url=OWNER_USERNAME)]
     ]
     await update.message.reply_text(
         "Bhai, full safe hai IOS HACK 👍\n\n"
@@ -168,7 +168,7 @@ async def android_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     keyboard = [
         [InlineKeyboardButton("📲 View Post", url=ANDROID_POST)],
-        [InlineKeyboardButton("💬 Contact Owner", url=OWNER_USERNAME)]
+        [InlineKeyboardButton("💬 Paid Hack Free", url=OWNER_USERNAME)]
     ]
     await update.message.reply_text(
         "Bhai, full safe hai Android HACK 👍\n\n"
@@ -223,7 +223,7 @@ async def announce(update: Update, context: ContextTypes.DEFAULT_TYPE):
         btn_url = parts[2].strip()
         custom_keyboard = [[InlineKeyboardButton(btn_text, url=btn_url)]]
     else:
-        custom_keyboard = [[InlineKeyboardButton("💬 Contact Owner", url=OWNER_USERNAME)]]
+        custom_keyboard = [[InlineKeyboardButton("💬 Paid Hack Free", url=OWNER_USERNAME)]]
 
     markup = InlineKeyboardMarkup(custom_keyboard)
     users = get_all_users()
